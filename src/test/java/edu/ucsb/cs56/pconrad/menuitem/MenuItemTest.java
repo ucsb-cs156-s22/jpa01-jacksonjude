@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 public class MenuItemTest {
 
     private MenuItem smallPokeBowl;
+    private MenuItem miniPokeBowl;
 
 
     @Test
@@ -56,4 +57,27 @@ public class MenuItemTest {
         assertEquals("Small Poke Bowl,1049,Poke Bowls", smallPokeBowl.toString());
     }
 
+    @Test
+    public void test_getPriceCentsLt10() {
+        miniPokeBowl = new MenuItem("Mini Poke Bowl", 1009, "Poke Bowls");
+        assertEquals("$10.09", miniPokeBowl.getPrice());
+    }
+
+    @Test
+    public void test_getPriceInCents() {
+        smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
+        assertEquals(1049, smallPokeBowl.getPriceInCents());
+    }
+
+    @Test
+    public void test_getCategory() {
+        smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
+        assertEquals("Poke Bowls", smallPokeBowl.getCategory());
+    }
+
+    @Test
+    public void test_getName() {
+        smallPokeBowl = new MenuItem("Small Poke Bowl", 1049, "Poke Bowls");
+        assertEquals("Small Poke Bowl", smallPokeBowl.getName());
+    }
 }
