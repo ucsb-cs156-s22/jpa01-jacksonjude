@@ -45,7 +45,14 @@ public class MenuItem {
 
     public String getPrice()
     {
-        return "$" + priceInCents/100 + "." + zeroPadding(priceInCents%100);
+        int rawCentsTotal = priceInCents%100;
+        String formattedCentsString = String.valueOf(rawCentsTotal);
+        if (rawCentsTotal < 10)
+        {
+            formattedCentsString = "0" + rawCentsTotal;
+        }
+
+        return "$" + priceInCents/100 + "." + formattedCentsString;
     }
 
     /**
@@ -71,15 +78,6 @@ public class MenuItem {
             priceString = " " + priceString;
         }
         return priceString;
-    }
-
-    private String zeroPadding(int num)
-    {
-        if (num < 10)
-        {
-            return "0" + num;
-        }
-        return String.valueOf(num);
     }
 
     // Getter for the raw priceInCents property
