@@ -2,7 +2,6 @@
 
 Starter code for https://ucsb-cs156.github.io/w22/lab/jpa01/
 
-
 # Testing with Junit
 
 To run test cases with JUnit, use:
@@ -32,4 +31,3 @@ mvn test org.pitest:pitest-maven:mutationCoverage
 Then open `target/pit-reports/DATE-TIME-STAMP/index.html`
 
 Note that the `DATE-TIME-STAMP` will vary; it will be something like `202112311716`
-
