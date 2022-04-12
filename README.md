@@ -1,7 +1,6 @@
-# STARTER-jpa01
+# jpa01-jacksonude
 
-Starter code for https://ucsb-cs156.github.io/w22/lab/jpa01/
-
+Starter code at https://ucsb-cs156.github.io/w22/lab/jpa01/
 
 # Testing with Junit
 
@@ -20,6 +19,8 @@ mvn test jacoco:report
 ```
 
 Then open: `target/site/jacoco/index.html` in a web browser.
+
+https://app.codecov.io/gh/ucsb-cs156-s22/jpa01-jacksonjude
 
 # Mutation testing
 
